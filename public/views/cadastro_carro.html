@@ -1,0 +1,45 @@
+<div class="show-nav">
+    <a href="#/">home</a>
+    <span>/</span>
+    <a href="#/cadastro">cadastro</a>
+</div>
+<div class="container" id="cadastro-container">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-lg-6 col-sm-offset-2 col-lg-offset-3">
+            <form role="form" id="cadastro" onsubmit="return false">
+                <h2>Cadastre um novo carro <small>é facil e rápido!</small></h2>
+                <hr>
+                <div id="alert-container"></div>
+                <br>
+                <div class="form-group">
+                    <select name="brand" id="brand" class="input-lg select-single select-brand" >
+                        <option value=""><option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select name="car" id="car" class="input-lg select-single select-car">
+                        <option value=""><option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 ">
+                        <div class="form-group">
+                            <input type="number" name="year" id="year" min="1950" max="2018" step="1"
+                                   class="form-control" placeholder="Ano (entre 1950 e 2018)"
+                                   onchange="controller.dataBindingYear()">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6"><a class="btn btn-primary btn-block btn-lg" onclick="controller.reset()">Reset</a></div>
+                    <div class="col-xs-12 col-md-6"><a class="btn btn-success btn-block btn-lg" onclick="controller.save()">Salvar</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

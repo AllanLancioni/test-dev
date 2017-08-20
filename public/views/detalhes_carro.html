@@ -1,0 +1,27 @@
+<div class="show-nav">
+    <a href="#/">home</a>
+    <span>/</span>
+    <span>detalhes</span>
+    <span>/</span>
+    <a><%= id %></a>
+</div>
+<div id="details">
+
+    <h1><%= id %>: <%= (car) ? car.name : ''%></h1>
+    <hr>
+    <div class="col-sm-7">
+        <h2 align="left"><b>Marca:</b> <%= (brand) ? brand.id : '' %> - <%= (brand) ? brand.name : ''  %></h2>
+        <h2 align="left"><b>Ano:</b> <%= year %> </h2>
+        <hr>
+        <div class="options">
+            <a href="#/listagem">Listagem</a>
+            <a href="#/cadastro">Cadastro</a>
+            <a href="#/cadastro/<%= id %>">Modificar</a>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <h3>Outros carros:</h3>
+        <div id="otherCars"></div>
+    </div>
+    <button class="btn btn-primary clear-cache-btn" onclick="controller.clearCache()">Limpar Cache</button>
+</div>
